@@ -1,4 +1,4 @@
-@main def Question_01: Unit = {
+@main def Question_03: Unit = {
     println("Enter a list of integers separated by spaces:")
     val inputStr = scala.io.StdIn.readLine()
     val inputList = inputStr.split(" ").map(_.toInt).toList

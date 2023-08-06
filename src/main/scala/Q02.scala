@@ -1,4 +1,4 @@
-@main def Question_01: Unit = {
+@main def Question_02: Unit = {
     print("Enter the integers: ")
     val inputStr = scala.io.StdIn.readLine()
     val inputList = inputStr.split(" ").map(_.toInt).toList
