@@ -1,15 +1,19 @@
 @main def Question_03: Unit = {
-    println("Enter a list of integers separated by spaces:")
+    print("Enter the integers : ")
     val inputStr = scala.io.StdIn.readLine()
     val inputList = inputStr.split(" ").map(_.toInt).toList
 
     val output = filterPrime(inputList)
-    println("Prime numbers in the list: " + output.mkString(", "))}
+    print("Prime numbers in the list: " + output.mkString(", "))}
 
 val isPrime: Int => Boolean = n => {
-    if (n <= 1) false
-    else if (n == 3 || n ==2) true
-    else {
+    if(n <= 1){
+        false
+    }
+    else if(n == 3 || n ==2){
+        true
+    }
+    else{
     checkPrime(n, 2)
     }
 }
@@ -23,11 +27,11 @@ def checkPrime(n: Int, i: Int): Boolean = {
         if(n % i == 0){
             false
         }
-        else {
+        else{
             checkPrime(n, i+1)
         }
     }
-    else {
+    else{
         true
     }
 }
