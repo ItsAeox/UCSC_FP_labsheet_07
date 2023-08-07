@@ -9,17 +9,25 @@
 val isPrime: Int => Boolean = n => {
     if (n <= 1) false
     else if (n == 3 || n ==2) true
-    else if (n % 2 == 0 || n % 3 == 0) false
     else {
-    var i = 5
-    while (i < n) {
-        if (n % i == 0) false
-        i += 1
-    }
-    true
+    checkPrime(n, 2)
     }
 }
 
 def filterPrime(numbers: List[Int]): List[Int] = {
     numbers.filter(isPrime)
+}
+
+def checkPrime(n: Int, i: Int): Boolean = {
+    if(i < n) {
+        if(n % i == 0){
+            false
+        }
+        else {
+            checkPrime(n, i+1)
+        }
+    }
+    else {
+        true
+    }
 }
