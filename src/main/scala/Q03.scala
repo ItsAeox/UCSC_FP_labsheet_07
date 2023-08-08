@@ -14,7 +14,7 @@ val isPrime: Int => Boolean = n => {
         true
     }
     else{
-    checkPrime(n, 2)
+        checkPrime(n, 2)
     }
 }
 
